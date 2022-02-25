@@ -1,8 +1,8 @@
 import {Component} from 'react';
-import Blank from './components/Blank';
-import Guess from './components/Guess';
-import PopupHandler from './components/Popup';
-import Board from './components/Board';
+import Blank from './Blank';
+import Guess from './Guess';
+import PopupHandler from './Popup';
+import Board from './Board';
 import randomWords from 'random-words';
 
 class App extends Component {
@@ -76,7 +76,7 @@ class App extends Component {
         ));
 
         return (
-            <div className='wrapper'>
+            <div className='wrapper' data-testid='app'>
                 <PopupHandler word={this.state.answer} stage={this.state.stage} start={this.start} restart={this.restart}/>
                 <Board handler={this.handleSubmit} guesses={this.state.guesses} blanks={blanks}/>
             </div>

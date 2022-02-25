@@ -7,7 +7,7 @@ function Popup(props) {
 
     return (
         <div className="popup">
-            <div className="popup-inner" ref={ref}>
+            <div className="popup-inner" ref={ref} data-testid='popup'>
                 {props.children}
                 <button onClick={props.dismiss}>Close</button>
             </div>
@@ -16,18 +16,18 @@ function Popup(props) {
 }
 
 function PopupHandler(props) {
-    const stage = props.stage, word = props.word;
+    const { word, stage, start, restart } = props;
 
     switch (stage) {
         case -1:
             return (
-                <Popup dismiss={props.start}>
+                <Popup dismiss={start}>
                     Welcome!
                 </Popup>
             );
         case 1:
             return (
-                <Popup dismiss={props.restart}>
+                <Popup dismiss={restart}>
                     <p>                    
                         You just lost!
                         The word was <a href={'https://www.merriam-webster.com/dictionary/' + word} target='_blank'>{word}</a>.
@@ -36,7 +36,7 @@ function PopupHandler(props) {
             );
         case 2:
             return (
-                <Popup trigger={true} dismiss={props.restart}>
+                <Popup trigger={true} dismiss={restart}>
                     You just won!
                 </Popup>
             );
