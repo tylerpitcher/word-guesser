@@ -1,7 +1,7 @@
 import Tile from './Tile';
 
 function getStyle(found, answer, loc) {
-    if (found == answer[loc]) return {
+    if (found === answer[loc]) return {
         'backgroundColor': 'lightgreen',
         'animation': 'jump 0.5s ease-in',
         'animationDelay': 0.2 * (loc + 1) + 's'

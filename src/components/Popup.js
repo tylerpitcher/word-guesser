@@ -16,7 +16,7 @@ function Popup(props) {
 }
 
 function PopupHandler(props) {
-    const stage = props.stage;
+    const stage = props.stage, word = props.word;
 
     switch (stage) {
         case -1:
@@ -28,7 +28,10 @@ function PopupHandler(props) {
         case 1:
             return (
                 <Popup dismiss={props.restart}>
-                    You just lost!
+                    <p>                    
+                        You just lost!
+                        The word was <a href={'https://www.merriam-webster.com/dictionary/' + word} target='_blank'>{word}</a>.
+                    </p>
                 </Popup>
             );
         case 2:
@@ -37,9 +40,9 @@ function PopupHandler(props) {
                     You just won!
                 </Popup>
             );
+        default:
+            return '';
     }
-
-    return '';
 }
 
 export default PopupHandler;

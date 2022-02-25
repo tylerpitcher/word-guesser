@@ -7,7 +7,7 @@ function Board(props) {
             <form onSubmit={props.handler} autoComplete='off'>
                 <label htmlFor='guess-input'>Guess:</label>
                 <input type='text' id='guess-input' name='guess' />
-                <input type='submit' value='Try' name='submit' id='submit'/>
+                <input type='submit' value='Try' name='submit' id='submit' />
             </form>
         </div>
     );

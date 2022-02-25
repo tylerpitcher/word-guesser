@@ -21,7 +21,7 @@ class App extends Component {
     generateWord = () => {
         const word = randomWords({ exactly: 1, maxLength: 6})[0];
         console.log(word);
-        return word.split('');
+        return word.toUpperCase().split('');
     }
 
     start = () => {
@@ -39,17 +39,16 @@ class App extends Component {
     }
 
     isAnswer = (guess) => {
-        return guess.join() == this.state.answer.join();
+        return guess.join() === this.state.answer.join();
     }
 
     handleSubmit = (event) => {
         const answerLength = this.state.answer.length;
-        const guess = event.target.elements.guess.value.split('');
+        const guess = event.target.elements.guess.value.toUpperCase().split('');
         const numberOfAttempts = this.state.guesses.length;
 
-        if (guess.length == answerLength) {
+        if (guess.length === answerLength) {
             if (this.isAnswer(guess)) {
-                console.log('here');
                 this.setState(() => ({ stage: 2 }));
             } 
 
