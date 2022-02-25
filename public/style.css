@@ -3,7 +3,7 @@
     font-family: Roboto;
     padding: 0;
     margin: 0;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 a {
@@ -18,12 +18,19 @@ button {
     border: none;
     padding: 0.5em;
     background-color: lightgrey;
+    transition: 0.75s ease;
 }
 
+button:hover, input[type='submit']:hover {
+    box-shadow: inset 0 -4em 0 black;
+    color: white;
+    transition: 0.5s ease;
+}
+/* 
 button:focus {
     border: 1px solid grey inset;
     box-shadow: inset 0 0 2px grey;
-}
+} */
 
 /* Tiles */
 
@@ -118,6 +125,7 @@ form input[type='submit'] {
     background-color: lightgrey;
     padding: 1em 0em 1em;
     cursor: pointer;
+    transition: 0.75s ease;
 }
 
 @keyframes jump {

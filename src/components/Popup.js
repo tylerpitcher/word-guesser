@@ -7,9 +7,9 @@ function Popup(props) {
 
     return (
         <div className="popup">
-            <div className="popup-inner" ref={ref} data-testid='popup'>
+            <div className="popup-inner" data-testid='popup'>
                 {props.children}
-                <button onClick={props.dismiss}>Close</button>
+                <button onClick={props.dismiss} ref={ref}>Close</button>
             </div>
         </div>
     );
