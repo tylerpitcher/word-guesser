@@ -20,7 +20,6 @@ class App extends Component {
 
     generateWord = () => {
         const word = randomWords({ exactly: 1, maxLength: 6})[0];
-        console.log(word);
         return word.toUpperCase().split('');
     }
 

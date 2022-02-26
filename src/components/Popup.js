@@ -1,15 +1,15 @@
 import {useRef, useEffect} from 'react';
 
 function Popup(props) {
-    // Set focus to dismiss button
+    // Set focus to popup
     const ref = useRef(null);
     useEffect(() => ref.current.focus(), [ref]);
 
     return (
-        <div className="popup">
+        <div className="popup" ref={ref}>
             <div className="popup-inner" data-testid='popup'>
                 {props.children}
-                <button onClick={props.dismiss} ref={ref}>Close</button>
+                <button onClick={props.dismiss}>Close</button>
             </div>
         </div>
     );
