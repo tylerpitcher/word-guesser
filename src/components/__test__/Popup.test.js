@@ -3,6 +3,10 @@ import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import PopupHandler from '../Popup';
 
+/*
+    Frontend tests for all popups.
+*/
+
 test('Display Welcome Popup', () => {
     render(<PopupHandler stage={-1}/>);
     const popup = screen.getByTestId('popup');

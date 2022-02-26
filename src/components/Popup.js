@@ -1,5 +1,8 @@
 import {useRef, useEffect} from 'react';
 
+/*
+    Popup with content & close button.
+*/
 function Popup(props) {
     // Set focus to popup
     const ref = useRef(null);
@@ -15,6 +18,10 @@ function Popup(props) {
     );
 }
 
+
+/*
+    Returns correct popup based off of props.
+*/
 function PopupHandler(props) {
     const { word, stage, start, restart } = props;
 

@@ -1,3 +1,6 @@
+/*
+    Board component, contains all tiles & input form.
+*/
 function Board(props) {
     return (
         <div id='board'>

@@ -5,6 +5,9 @@ import PopupHandler from './Popup';
 import Board from './Board';
 import randomWords from 'random-words';
 
+/*
+    Main app component.
+*/
 class App extends Component {
     constructor(props) {
         super(props);

@@ -1,5 +1,8 @@
 import Tile from './Tile';
 
+/*
+    Returns css object for each tile.
+*/
 function getStyle(found, answer, loc) {
     if (found === answer[loc]) return {
         'backgroundColor': 'lightgreen',
@@ -11,6 +14,9 @@ function getStyle(found, answer, loc) {
     return { 'backgroundColor': 'rgb(299, 100, 100)' };
 }
 
+/*
+    Component of tiles for each letter of guess.
+*/
 function Guess(props) {
     const answer = props.answer;
     // Create array of tiles to display
