@@ -1,3 +1,6 @@
+/*
+    File contains Guess component.
+*/
 import Tile from './Tile';
 
 /*
@@ -19,6 +22,7 @@ function getStyle(found, answer, loc) {
 */
 function Guess(props) {
     const answer = props.answer;
+    
     // Create array of tiles to display
     const tiles = props.guess.map((letter, loc) => {
         const style = getStyle(letter, answer, loc);  

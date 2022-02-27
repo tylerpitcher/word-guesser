@@ -1,10 +1,9 @@
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Tile from '../Tile';
-
 /*
     Frontend tests for tile component.
 */
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Tile from '../Tile';
 
 // Test tile is displayed with letter.
 test('Display Tile', () => {

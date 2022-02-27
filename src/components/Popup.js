@@ -1,3 +1,6 @@
+/*
+    File contains all components for popups to render.
+*/
 import {useRef, useEffect} from 'react';
 
 /*

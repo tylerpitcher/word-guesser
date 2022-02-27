@@ -1,5 +1,5 @@
 /*
-    Square tile for letter in props.
+    Square tile for letter passed in props.
 */
 function Tile(props) {
     return (

@@ -1,3 +1,6 @@
+/*
+    Main app component.
+*/
 import {Component} from 'react';
 import Blank from './Blank';
 import Guess from './Guess';
@@ -5,9 +8,6 @@ import PopupHandler from './Popup';
 import Board from './Board';
 import randomWords from 'random-words';
 
-/*
-    Main app component.
-*/
 class App extends Component {
     constructor(props) {
         super(props);
@@ -21,17 +21,26 @@ class App extends Component {
         };
     }
 
+    /*
+        Returns newly generated word with a max length of 6.
+    */
     generateWord = () => {
         const word = randomWords({ exactly: 1, maxLength: 6})[0];
         return word.toUpperCase().split('');
     }
 
+    /*
+        Starts game by updating stage.
+    */
     start = () => {
         this.setState(() => ({
             stage: 0
         }));
     }
 
+    /*
+        Restarts game by generating new word & updating stage.
+    */
     restart = () => {
         this.setState(prev => ({ 
             answer: this.generateWord(), 
@@ -40,10 +49,16 @@ class App extends Component {
         }));
     }
 
+    /*
+        Checks if guess passed equals the answer.
+    */
     isAnswer = (guess) => {
         return guess.join() === this.state.answer.join();
     }
 
+    /*
+        Handles form submits from Board component.
+    */
     handleSubmit = (event) => {
         const answerLength = this.state.answer.length;
         const guess = event.target.elements.guess.value.toUpperCase().split('');
@@ -70,6 +85,9 @@ class App extends Component {
         event.target.elements.guess.value = '';
     }
 
+    /*
+        Returns JSX of component.
+    */
     render = () => {
         const length = this.state.answer.length;
         const attemptsRemaining = length - this.state.guesses.length;

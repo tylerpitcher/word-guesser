@@ -1,11 +1,11 @@
+/*
+    Frontend tests for all popups.
+*/
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import PopupHandler from '../Popup';
 
-/*
-    Frontend tests for all popups.
-*/
 
 // Test if welcome popup is displayed on stage -1.
 test('Display Welcome Popup', () => {
