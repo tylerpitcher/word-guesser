@@ -1,7 +1,7 @@
 import Tile from './Tile';
 
 /*
-    Creates blank tiles of length given in props.
+    Creates blank tiles with length given in props.
 */
 export function Blank(props) {
     // Create array of blank tiles to display
