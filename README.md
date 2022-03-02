@@ -28,7 +28,7 @@ A wordle-inspired guess the word game.
 │   │   ├── Guess.js                ======> Previous guess component
 │   │   ├── Popup.js                ======> Popup handler
 │   │   └── Tile.js                 ======> Guess tiles
-│   └── index.js                    ======> Renders App to DOM
+│   └── index.js                    ======> Renders app to DOM
 ├── .gitignore         
 ├── package-lock.json
 └── package.json
