@@ -33,3 +33,6 @@ A wordle-inspired guess the word game.
 ├── package-lock.json
 └── package.json
 ```
+
+## Screenshot
+<img src="https://i.imgur.com/mEt7Dyr.jpg" height="400">
